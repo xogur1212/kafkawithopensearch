@@ -12,6 +12,10 @@ spring:
             value: false
     idle:
       timeout: 1000
+  elasticsearch:
+    uris: localhost:9200
+
+
 springdoc:
   swagger-ui:
     path: /swagger-ui   # swagger-ui custom path
@@ -20,3 +24,4 @@ springdoc:
 
 server:
   port: 8999
+

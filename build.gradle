@@ -23,6 +23,9 @@ ext {
 }
 
 dependencies {
+
+
+
     // springBoot version
     def springframeworkBoot = "3.0.1"
 
@@ -56,6 +59,10 @@ dependencies {
     implementation("org.springframework.kafka:spring-kafka:$springframeworkBoot")
     testImplementation("org.springframework.kafka:spring-kafka-test:$springframeworkBoot")
 
+    //openSearch
+    implementation 'org.opensearch.client:spring-data-opensearch-starter:1.2.0'
+    //for openSearchTest
+    implementation 'org.opensearch.client:spring-data-opensearch-test-autoconfigure:1.2.0'
 
 }
 
