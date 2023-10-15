@@ -21,4 +21,6 @@
 #### 이슈  maven 프로젝트에선 실행되는데 Gradle에선 Error creating bean with name 'bookRepository' defined in com.example.kafkawithopensearch.opensearch.adapter.repository.BookRepository defined in @EnableElasticsearchRepositories declared on KafkaWithOpenSearchApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception 같은 에러 발생
 #### 시간이 지나니까 해결 .... 뭐가 문제였을까 ...
 
+#### 참고 https://github.com/spring-projects/spring-kafka/blob/bfcf3b70411208eb4c1436f2edd3c914d486e118/spring-kafka/src/main/java/org/springframework/kafka/annotation/KafkaListener.java#L4
 #### 버전에 맞는 Serialize 추가 
+#### kafka 로 메시지 보내고 받아서 opensearch로 저장 및 , 읽어오기 까지 

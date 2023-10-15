@@ -17,6 +17,7 @@ spring:
   jackson:
     serialization:
       INDENT_OUTPUT: true
+    default-property-inclusion: non_null
 
 
 opensearch:

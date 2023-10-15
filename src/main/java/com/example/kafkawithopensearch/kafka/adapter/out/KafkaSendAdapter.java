@@ -1,6 +1,8 @@
 package com.example.kafkawithopensearch.kafka.adapter.out;
 
 import com.example.kafkawithopensearch.kafka.port.out.KafkaPort;
+import com.example.kafkawithopensearch.opensearch.book.adapter.out.repository.BookRepository;
+import com.example.kafkawithopensearch.opensearch.book.domain.Book;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -15,11 +17,15 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class KafkaSendAdapter implements KafkaPort {
 
-    private final KafkaTemplate<String,String> kafkaTemplate;
+    private final KafkaTemplate<String,Object> kafkaTemplate;
+
+//    private final BookRepository bookRepository;
     @Override
     public Mono<Object> testMethod() {
-        kafkaTemplate.send(new ProducerRecord<>("test","test"));
-
+//        kafkaTemplate.send(new ProducerRecord<>("test","test"));
+        Book book = Book.builder().title("a").authorName("a-Writer").build();
+//        bookRepository.save(book);
+        kafkaTemplate.send(new ProducerRecord<>("book", book));
         return Mono.just("success");
     }
 }
