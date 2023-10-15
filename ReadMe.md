@@ -14,5 +14,11 @@
 ### 4. opensearch 관련 작업
 #### 참조 https://github.com/opensearch-project/spring-data-opensearch
 #### 참조2 https://velog.io/@backtony/Spring-Data-Elasticsearch-%EC%97%B0%EB%8F%99-%EB%B0%8F-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0
+#### 참조3 https://github.com/M-Razavi/Spring-Data-OpenSearch-Example/blob/master/src/main/java/org/opensearch/data/example/controller/BookController.java
 
 
+#### 23/10/15 
+#### 이슈  maven 프로젝트에선 실행되는데 Gradle에선 Error creating bean with name 'bookRepository' defined in com.example.kafkawithopensearch.opensearch.adapter.repository.BookRepository defined in @EnableElasticsearchRepositories declared on KafkaWithOpenSearchApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception 같은 에러 발생
+#### 시간이 지나니까 해결 .... 뭐가 문제였을까 ...
+
+#### 버전에 맞는 Serialize 추가 

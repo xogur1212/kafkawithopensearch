@@ -1,4 +1,4 @@
-package com.example.kafkawithopensearch.opensearch.adapter.domain;
+package com.example.kafkawithopensearch.opensearch.book.domain;
 
 
 import org.springframework.data.annotation.Id;

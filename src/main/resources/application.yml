@@ -12,9 +12,17 @@ spring:
             value: false
     idle:
       timeout: 1000
-  elasticsearch:
-    uris: localhost:9200
+#  elasticsearch:
+#    uris: localhost:9200
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
 
+
+opensearch:
+  uris: http://localhost:9200
+  username: admin
+  password: admin
 
 springdoc:
   swagger-ui:
